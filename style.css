@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+
+    background: linear-gradient(285deg, rgba(57, 57, 57, 0.04) 0%, rgba(57, 57, 57, 0.04) 25%, rgba(126, 126, 126, 0.04) 25%, rgba(126, 126, 126, 0.04) 50%, rgba(80, 80, 80, 0.04) 50%, rgba(80, 80, 80, 0.04) 75%, rgba(117, 117, 117, 0.04) 75%, rgba(117, 117, 117, 0.04) 100%), linear-gradient(333deg, rgba(26, 26, 26, 0.04) 0%, rgba(26, 26, 26, 0.04) 25%, rgba(154, 154, 154, 0.04) 25%, rgba(154, 154, 154, 0.04) 50%, rgba(218, 218, 218, 0.04) 50%, rgba(218, 218, 218, 0.04) 75%, rgba(91, 91, 91, 0.04) 75%, rgba(91, 91, 91, 0.04) 100%), linear-gradient(45deg, rgba(14, 14, 14, 0.04) 0%, rgba(14, 14, 14, 0.04) 25%, rgba(216, 216, 216, 0.04) 25%, rgba(216, 216, 216, 0.04) 50%, rgba(44, 44, 44, 0.04) 50%, rgba(44, 44, 44, 0.04) 75%, rgba(111, 111, 111, 0.04) 75%, rgba(111, 111, 111, 0.04) 100%), linear-gradient(251deg, rgba(27, 27, 27, 0.04) 0%, rgba(27, 27, 27, 0.04) 25%, rgba(107, 107, 107, 0.04) 25%, rgba(107, 107, 107, 0.04) 50%, rgba(167, 167, 167, 0.04) 50%, rgba(167, 167, 167, 0.04) 75%, rgba(34, 34, 34, 0.04) 75%, rgba(34, 34, 34, 0.04) 100%), linear-gradient(63deg, rgba(114, 114, 114, 0.04) 0%, rgba(114, 114, 114, 0.04) 25%, rgba(16, 16, 16, 0.04) 25%, rgba(16, 16, 16, 0.04) 50%, rgba(190, 190, 190, 0.04) 50%, rgba(190, 190, 190, 0.04) 75%, rgba(159, 159, 159, 0.04) 75%, rgba(159, 159, 159, 0.04) 100%), linear-gradient(90deg, rgb(44, 69, 142), rgb(133, 17, 234))
+}
+
+
+
+#survey-form {
+    background-color: white;
+    width: 750px;
+    padding: 23px;
+    grid-column-start: 2;
+    border-radius: 4px;
+
+}
+
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+.container input:checked~.checkmark {
+    background-color: purple;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+
+.container .checkmark:after {
+    right: 2px;
+    top: 3px;
+    left: 3px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: solid white;
+    background-color: white
+}
+
+.container:hover input~.checkmark2 {
+    background-color: #ccc;
+}
+
+
+.container input:checked~.checkmark2 {
+    background-color: purple;
+}
+
+
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.container input:checked~.checkmark2:after {
+    display: block;
+}
+
+
+.container .checkmark2:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+
+.checkmark2 {
+    position: absolute;
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+
+.container p {
+    margin-left: 23px;
+    margin-top: 0;
+
+
+
+}
+
+input[type="text"],
+input[type="email"] {
+    border: transparent !important;
+    height: 35px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: purple;
+
+}
+
+input[type="number"] {
+    border: transparent !important;
+    height: 35px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: purple;
+}
+
+
+
+#number-label p {
+    color: black;
+}
+
+#dropdown {
+    border: transparent !important;
+    height: 35px;
+    width: 140px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    background-color: #eee;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: purple;
+    font-family: 'Poppins', sans-serif;
+}
+
+#submit {
+    background-color: rgb(133, 17, 234);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        margin-left: 0;
+        padding: 0;
+
+
+        background: purple;
+
+    }
+
+    #survey-form {
+        background-color: white;
+
+        width: 500px;
+        border-radius: 4px;
+
+    }
+
+    textarea {
+        background-color: #eee;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: purple;
+        font-family: 'Poppins', sans-serif;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    body {
+        margin-left: 0;
+        padding: 0;
+         font-size: 12px;
+
+        background: purple;
+
+    }
+
+    #survey-form {
+        background-color: white;
+        
+        width: 340px;
+        border-radius: 4px;
+
+    }
+
+    textarea {
+        background-color: #eee;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: purple;
+        font-family: 'Poppins', sans-serif;
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+
+        background: purple;
+
+    }
+
+    #survey-form {
+        background-color: white;
+        
+        width: 300px;
+       
+
+    }
+
+    textarea {
+        background-color: #eee;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: purple;
+        font-family: 'Poppins', sans-serif;
+        width: 250px;
+    }
+}
